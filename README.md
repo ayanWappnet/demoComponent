@@ -1,1 +1,5 @@
-//DEMOCOMPONENT
+Remaining Component
+
+- DmsImageSlider
+- DmsWebView
+- DmsDate

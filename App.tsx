@@ -5,8 +5,8 @@
  * @format
  */
 
-import React, {useEffect, useState} from 'react';
-import type {PropsWithChildren} from 'react';
+import React, { useEffect, useState } from "react";
+import type { PropsWithChildren } from "react";
 import {
   SafeAreaView,
   ScrollView,
@@ -15,8 +15,8 @@ import {
   TouchableOpacity,
   useColorScheme,
   View,
-} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+} from "react-native";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 import {
   Header,
   Dmslabel,
@@ -27,12 +27,11 @@ import {
   Radiobtn,
   Dmsbranch,
   DmsButton,
-  DmsImageSlider,
   DmsradioBtn,
   DmsKeyboardAvoidingView,
   DmsWebView,
   DmsDate,
-} from 'dms-components-rn';
+} from "dms-components-rn";
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -40,30 +39,30 @@ let g = 0;
 function App(): React.JSX.Element {
   const test = (aa: any) => {};
   const data = [
-    {id: '1', label: 'V5 Present'},
-    {id: '2', label: 'Handbook Present'},
-    {id: '3', label: 'Service Book Present 3'},
-    {id: '4', label: 'Looking Wheelnut ?'},
-    {id: '5', label: '2 Keys ?'},
+    { id: "1", label: "V5 Present" },
+    { id: "2", label: "Handbook Present" },
+    { id: "3", label: "Service Book Present 3" },
+    { id: "4", label: "Looking Wheelnut ?" },
+    { id: "5", label: "2 Keys ?" },
   ];
 
   const images = [
-    {ImageUri: 'https://picsum.photos/200/300', Name: 'Image 1'},
-    {ImageUri: 'https://picsum.photos/200', Name: 'Image 2'},
-    {ImageUri: 'https://picsum.photos/200', Name: 'Image 3'},
+    { Image: "https://picsum.photos/200/300", Name: "Image 1" },
+    { Image: "https://picsum.photos/200", Name: "Image 2" },
+    { Image: "https://picsum.photos/200", Name: "Image 3" },
 
     // Add more objects as needed
   ];
-  const isDarkMode = useColorScheme() === 'dark';
-  const [registrationNumber, setRegistrationNumber] = useState<string>('');
+  const isDarkMode = useColorScheme() === "dark";
+  const [registrationNumber, setRegistrationNumber] = useState<string>("");
   const [selectedOption, setSelectedOption] = useState(null);
-  const [selectedVehicle, setSelectedVehicle] = useState<string>('');
+  const [selectedVehicle, setSelectedVehicle] = useState<string>("");
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   let [reportProp, setReport] = useState<null>(null);
-  const [mileageNumber, setMileageNumber] = useState('');
-  const [userID, setUserID] = useState('');
-  const [password, setPassword] = useState('');
-  const [serverAddress, setServerAddress] = useState('');
+  const [mileageNumber, setMileageNumber] = useState("");
+  const [userID, setUserID] = useState("");
+  const [password, setPassword] = useState("");
+  const [serverAddress, setServerAddress] = useState("");
   const [enableBranch, setEnableBranch] = useState(false);
   useEffect(() => {
     load();
@@ -77,46 +76,46 @@ function App(): React.JSX.Element {
     // await setTechnicianStatus(await scheduledJobs_Logic.getTechStatus(user));
     let jobs = [
       {
-        'Job No': '10558',
-        'Customer Name': 'Stock No 5646.1',
-        'Date Out': '#22/09/23#',
-        Reg: 'W897RET',
-        Make: 'Volkswagen',
-        Model: 'GOLF',
-        'Time Out': '05:00PM',
-        jobID: '10558.1',
+        "Job No": "10558",
+        "Customer Name": "Stock No 5646.1",
+        "Date Out": "#22/09/23#",
+        Reg: "W897RET",
+        Make: "Volkswagen",
+        Model: "GOLF",
+        "Time Out": "05:00PM",
+        jobID: "10558.1",
       },
       {
-        'Job No': '10524',
-        'Customer Name': 'Mr Aidan36aaasasasaddsasa Willis3',
-        'Date Out': '##',
-        Reg: 'SP65FEV',
-        Make: 'Mercedes-Benz',
-        Model: 'S350',
-        'Time Out': '05:00PM',
-        jobID: '10524.1',
+        "Job No": "10524",
+        "Customer Name": "Mr Aidan36aaasasasaddsasa Willis3",
+        "Date Out": "##",
+        Reg: "SP65FEV",
+        Make: "Mercedes-Benz",
+        Model: "S350",
+        "Time Out": "05:00PM",
+        jobID: "10524.1",
       },
       {
-        'Job No': '10271',
-        'Customer Name': 'Mr Perry Farrell',
-        'Date Out': '#15/12/22#',
-        Reg: 'YT67EWF',
-        Make: 'VAUXHALL',
-        Model: 'CORSA',
-        'Time Out': '05:00PM',
-        jobID: '10271.1',
+        "Job No": "10271",
+        "Customer Name": "Mr Perry Farrell",
+        "Date Out": "#15/12/22#",
+        Reg: "YT67EWF",
+        Make: "VAUXHALL",
+        Model: "CORSA",
+        "Time Out": "05:00PM",
+        jobID: "10271.1",
       },
     ];
     let reportPropa = {
       reportData: jobs,
       reportFunction: onPressFunc,
-      reportKey: 'Job No',
+      reportKey: "Job No",
       load: () => {
         load();
       },
     };
-    console.log('3wwwwwwwwww', JSON.stringify(reportPropa));
-    await setReport(reportPropa);
+    console.log("3wwwwwwwwww", JSON.stringify(reportPropa));
+    // await setReport(reportPropa);
   };
 
   const handlePress = (option: any) => {
@@ -125,11 +124,11 @@ function App(): React.JSX.Element {
 
   const onPressFunc = (line: any) => {
     // console.log(line);
-    console.log('@@@@LINE', line);
+    console.log("@@@@LINE", line);
   };
 
   const handleSearch = () => {
-    console.log('PREESSS');
+    console.log("PREESSS");
   };
   const handleDateChanged = (date: string) => {
     setSelectedDate(date);
@@ -137,87 +136,74 @@ function App(): React.JSX.Element {
 
   return (
     <>
-      <DmsDate initialDate={selectedDate} OnDateChanged={handleDateChanged} />
-      <JobList {...reportProp}></JobList>
-      {/* <Dmsbranch></Dmsbranch> */}
       {/* <DmsImageSlider images={images} /> */}
       {/* <DmsWebView
-        Routine={'REACT.TEST'}
-        Data={['1']}
-        HandleEvent={test}></DmsWebView> */}
+        Routine={"REACT.TEST"}
+        Data={["1"]}
+        HandleEvent={test}
+      /> */}
+      {/* <DmsDate
+        initialDate={selectedDate ?? ""}
+        OnDateChanged={handleDateChanged}
+      /> */}
       <Dmslabel
         {...{
-          Textstr: 'Customer ID',
-          fontWeight: 'bold',
+          Textstr: "Customer Id:",
+          fontWeight: "bold",
           fontSize: 10,
         }}
       />
-      <TouchableOpacity style={styles.inputContainer}>
+      <View style={styles.inputContainer}>
         <Dmstext
-          props={{
-            value: mileageNumber,
-            onChangeText: setMileageNumber,
-            placeholder: '99999',
-          }}
-          styles={styles.input1}
-          keyboardType="numeric"></Dmstext>
-      </TouchableOpacity>
-      <Text style={styles.header}>Choose an option:</Text>
+          secureTextEntry={false}
+          onChangeText={setMileageNumber}
+          placeholder="99999"
+          value={mileageNumber}
+          keyboardType="numeric"
+        />
+      </View>
+      <Dmslabel
+        {...{
+          Textstr: "Choose an option:",
+          fontWeight: "bold",
+          fontSize: 10,
+        }}
+      />
       <View style={styles.container}>
         <Radiobtn
-          onPress={() => handlePress('Option 1')}
-          selected={selectedOption === 'Option 1'}>
+          onPress={() => handlePress("Option 1")}
+          selected={selectedOption === "Option 1"}
+        >
           Option 1
         </Radiobtn>
         <Radiobtn
-          onPress={() => handlePress('Option 2')}
-          selected={selectedOption === 'Option 2'}>
+          onPress={() => handlePress("Option 2")}
+          selected={selectedOption === "Option 2"}
+        >
           Option 2
         </Radiobtn>
         <Radiobtn
-          onPress={() => handlePress('Option 3')}
-          selected={selectedOption === 'Option 3'}>
+          onPress={() => handlePress("Option 3")}
+          selected={selectedOption === "Option 3"}
+        >
           Option 3
         </Radiobtn>
         <Text style={styles.selectedOption}>
           Selected Option: {selectedOption}
         </Text>
       </View>
-      {/* <View style={{flex: 1, borderWidth: g}}>
-          <View
-            style={{
-              justifyContent: 'flex-end',
-              borderWidth: g,
-            }}>
-            <Dmslabel
-              {...{
-                Textstr: 'Customer ID',
-                fontWeight: 'bold',
-                fontSize: 10,
-              }}
-            />
-          </View> */}
-      {/* </View> */}
+
       <View style={styles.searchButton}>
         <DmsButton
           props={{
-            backgroundColor: '#007bff',
-            name: 'Search',
+            backgroundColor: "#007bff",
+            name: "Search",
             onPress: () => {
               handleSearch();
             },
-          }}></DmsButton>
+          }}
+        />
       </View>
-      {/* <DmsWebView
-        Routine={'REACT.TEST'}
-        Data={['1']}
-        HandleEvent={test}></DmsWebView> */}
-      {/* <View style={{flex: 1}}>
-        <DmsImageSlider
-          images={
-            'https://www.w3schools.com/images/picture.jpg'
-          }></DmsImageSlider>
-      </View> */}
     </>
   );
 }
@@ -225,17 +211,17 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
   button: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     padding: 20,
     marginHorizontal: 100,
     borderRadius: 15,
-    backgroundColor: 'blue',
+    backgroundColor: "blue",
   },
   sectionContainer: {
     marginTop: 32,
@@ -243,42 +229,42 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 24,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
-    fontWeight: '400',
+    fontWeight: "400",
   },
   highlight: {
-    fontWeight: '700',
+    fontWeight: "700",
   },
   registrationContainer: {
     marginTop: 100,
-    justifyContent: 'center',
-    backgroundColor: 'red',
+    justifyContent: "center",
+    backgroundColor: "red",
   },
   inputContainer: {
     width: 250,
     height: 50,
     borderRadius: 10,
     borderWidth: 1,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginTop: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     paddingLeft: 15,
     paddingRight: 15,
-    backgroundColor: '#ffffff',
+    backgroundColor: "#ffffff",
   },
   input1: {
     flex: 1,
-    textAlign: 'center',
+    textAlign: "center",
   },
   header: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
   },
   selectedOption: {
@@ -286,9 +272,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   searchButton: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 20,
-    alignSelf: 'center',
+    alignSelf: "center",
     width: 300,
     height: 50,
   },
